@@ -59,6 +59,7 @@
   .explorer-body{min-width:0}.house-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 24px;border-top:1px solid var(--line)}.step-button{border:1px solid #e5bd8040;border-radius:999px;background:#242437;padding:9px 14px;min-height:44px;font-size:13px}.step-button:hover{background:#393043}.step-button:disabled{opacity:.45;cursor:default}.step-count{color:var(--muted);font-size:12px;white-space:nowrap}.explorer .house-detail{justify-content:flex-start}.house-help{padding:0 24px 16px;margin:0;font-size:12px;color:var(--muted)}button.direction{font:inherit;width:100%;cursor:pointer}button.direction[aria-pressed=true]{border-color:var(--gold);background:#e5bd8026;box-shadow:inset 0 0 0 1px #e5bd8060}.qi-selection{margin-top:18px;padding:18px;border:1px solid #e5bd8040;border-radius:12px;background:#e5bd8008}.qi-selection h4{margin:0 0 6px;font:normal 23px Georgia,serif}.qi-selection p{margin:0}.qi-selection .note{margin-top:8px}.qi-controls{display:flex;justify-content:space-between;gap:10px;margin-top:14px}
   @media(max-width:750px){.explorer .house-detail{min-height:0}.house-controls{padding:16px}.house-help{padding-inline:16px}.step-button{padding-inline:12px}}
   .icon-defs{position:absolute;width:0;height:0;overflow:hidden}.symbol-icon{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.card-icon .symbol-icon{width:32px;height:32px}.direction.center .symbol-icon{width:36px;height:36px}.brand .symbol-icon{width:24px;height:24px;vertical-align:middle;color:var(--gold);margin-right:8px}.step-button{display:inline-flex;align-items:center;justify-content:center;gap:8px}.step-button .symbol-icon{width:18px;height:18px}
+  .house-wheel .sector{cursor:pointer;fill:#c3a9ed0b}.house-wheel .sector.featured{fill:#e5bd801c}.house-wheel .sector:hover{fill:#c3a9ed30}.house-wheel .sector.active{fill:#e5bd8050;stroke:var(--gold);stroke-width:2}.house-wheel .sector:focus-visible{outline:none;stroke:#fff;stroke-width:3}.wheel-icon{width:20px;height:20px;color:#c3a9ed;pointer-events:none}.wheel-icon.active{color:#f8dbab}.house-wheel .wheel-label{pointer-events:none;font:12px system-ui,sans-serif}.wheel-star{fill:#e5bd80;pointer-events:none}.wheel-halo{fill:none;stroke:#c3a9ed40;stroke-dasharray:1 7}.map-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 20px;margin:0 0 16px;font-size:12px;color:var(--muted)}.map-legend span{display:flex;align-items:center;gap:6px}.legend-dot{width:9px;height:9px;border-radius:50%;background:#e5bd80}.legend-dot.current{background:#e5bd8050;border:1px solid #e5bd80}.house-map-caption{max-width:32ch;min-height:40px;color:#e6d7e7}.house-map{padding-bottom:4px}.house-wheel{width:min(100%,390px)}
 </style>
 </head>
 <body>
@@ -69,6 +70,14 @@
 <symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8ZM12 1v2m0 18v2M1 12h2m18 0h2"/></symbol>
 <symbol id="icon-left" viewBox="0 0 24 24"><path d="m10 5-7 7 7 7M3 12h18"/></symbol>
 <symbol id="icon-right" viewBox="0 0 24 24"><path d="m14 5 7 7-7 7M21 12H3"/></symbol>
+<symbol id="icon-home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/></symbol>
+<symbol id="icon-value" viewBox="0 0 24 24"><path d="m3 8 5-5h8l5 5-9 13L3 8Zm0 0h18M8 3l4 18 4-18"/></symbol>
+<symbol id="icon-talk" viewBox="0 0 24 24"><path d="M4 4h16v12H9l-5 4V4Zm4 4h8m-8 4h5"/></symbol>
+<symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M5 19C-1 8 10 3 21 3c0 11-5 22-16 16Zm0 0L16 8M3 22l2-3"/></symbol>
+<symbol id="icon-heart" viewBox="0 0 24 24"><path d="M12 21 3 12C-3 5 7-1 12 6c5-7 15-1 9 6l-9 9Z"/></symbol>
+<symbol id="icon-change" viewBox="0 0 24 24"><path d="M4 10a8 8 0 0 1 14-5l3 3m0-5v5h-5M20 14a8 8 0 0 1-14 5l-3-3m0 5v-5h5"/></symbol>
+<symbol id="icon-work" viewBox="0 0 24 24"><path d="M3 7h18v14H3V7Zm5 0V3h8v4M3 12c5 3 13 3 18 0M12 12v4"/></symbol>
+<symbol id="icon-people" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M17 4a3 3 0 0 1 0 6m2 4a6 6 0 0 1 3 5v2"/></symbol>
 </defs></svg>
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="top"><div class="wrap nav"><a class="brand" href="#inicio"><span>✳</span> tu universo</a><button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-controls="navlinks" aria-expanded="false" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><nav class="navlinks" id="navlinks" aria-label="Navegación principal"><a href="#esencia">Tu esencia</a><a href="#casas">Las casas</a><a href="#qimen">Qi Men</a><a href="#reflexiones">Reflexiones</a></nav></div></header>
@@ -86,7 +95,7 @@
     <article class="card"><div class="card-icon"><svg class="symbol-icon" aria-hidden="true"><use href="#icon-rise"/></svg></div><div class="tag">Tu presencia · Ascendente en Leo</div><h3>Una luz propia</h3><p>Una presencia cálida y creativa. El desafío que propone la carta es confiar en tus talentos sin depender de la aprobación externa.</p></article>
   </div></section>
   <section id="casas"><div class="section-heading"><div><div class="eyebrow">02 / El mapa de tu vida</div><h2 class="section-title">Explora tus 12 casas<span class="spark">.</span></h2></div><p class="section-desc">Cada casa representa un área de la vida. Elige una para descubrir su historia; las marcadas con ✦ son las que destaca tu documento.</p></div>
-    <div class="explorer"><div><div class="house-map"><svg id="house-wheel" class="house-wheel" viewBox="0 0 360 360" aria-hidden="true"></svg><p class="house-map-caption">Mapa ilustrativo · selecciona una casa abajo</p></div><div id="house-list" class="house-list" role="group" aria-label="Elige una casa" aria-describedby="house-help"></div><p id="house-help" class="house-help">Usa las flechas del teclado para recorrer las casas; Inicio y Fin llevan a la primera y la última.</p></div><div class="explorer-body"><div id="house-detail" class="house-detail" aria-live="polite" aria-atomic="true"></div><div class="house-controls" aria-label="Recorrer las casas"><button id="house-prev" class="step-button" type="button">← Anterior</button><span id="house-count" class="step-count"></span><button id="house-next" class="step-button" type="button">Siguiente →</button></div></div></div><p class="note">El mapa es esquemático: sus sectores iguales no representan grados ni posiciones reales. Interpretaciones resumidas del documento original; no son cálculos astrológicos nuevos.</p>
+    <div class="explorer"><div><div class="house-map"><svg id="house-wheel" class="house-wheel" viewBox="0 0 360 360" role="group" aria-label="Mapa ilustrativo de las doce casas" aria-describedby="map-help"></svg><p id="map-caption" class="house-map-caption"></p></div><div class="map-legend" aria-label="Leyenda del mapa"><span><i class="legend-dot" aria-hidden="true"></i>✦ Casa destacada</span><span><i class="legend-dot current" aria-hidden="true"></i>Casa seleccionada</span></div><p id="map-help" class="house-help">Selecciona un sector del mapa o una casa abajo. Con teclado, usa Tab y Enter en el mapa.</p><div id="house-list" class="house-list" role="group" aria-label="Elige una casa" aria-describedby="house-help"></div><p id="house-help" class="house-help">Usa las flechas del teclado para recorrer las casas; Inicio y Fin llevan a la primera y la última.</p></div><div class="explorer-body"><div id="house-detail" class="house-detail" aria-live="polite" aria-atomic="true"></div><div class="house-controls" aria-label="Recorrer las casas"><button id="house-prev" class="step-button" type="button">← Anterior</button><span id="house-count" class="step-count"></span><button id="house-next" class="step-button" type="button">Siguiente →</button></div></div></div><p class="note">El mapa es esquemático: sus sectores iguales no representan grados ni posiciones reales. Interpretaciones resumidas del documento original; no son cálculos astrológicos nuevos.</p>
   </section>
   <section id="qimen"><div class="section-heading"><div><div class="eyebrow">03 / Otra forma de mirar</div><h2 class="section-title">Tu universo Qi Men<span class="spark">.</span></h2></div><p class="section-desc">Una segunda tradición, con símbolos propios y una brújula de posibilidades.</p></div><div class="qi-grid">
     <div class="qi-panel"><h3>El tigre y el agua</h3><p>Tu carta Qi Men describe al <strong>Perro de agua yang</strong>: comunicación, creatividad y fluidez. El <strong>Tigre</strong> simboliza determinación y liderazgo; la <strong>Madera yin</strong>, sensibilidad y capacidad de adaptación.</p><div class="pill-list"><span class="pill">✦ Guardián · Tigre</span><span class="pill">☷ Día maestro · Madera yin</span><span class="pill">☾ Puerta · Reposo</span><span class="pill">✧ Estrella · Grano</span></div><p>La puerta de reposo propone tranquilidad y cuidado; la estrella de grano habla de estabilidad y disfrute.</p></div>
@@ -134,6 +143,8 @@ function wheelPoint(radius, angle) {
   const radians = angle * Math.PI / 180;
   return [180 + radius * Math.cos(radians), 180 + radius * Math.sin(radians)];
 }
+const houseIcons = ["rise","value","talk","home","sun","leaf","heart","change","compass","work","people","moon"];
+wheel.appendChild(svgElement("circle", {cx:180, cy:180, r:173, class:"wheel-halo"}));
 houses.forEach((house, index) => {
   const start = -180 + index * 30;
   const end = start + 30;
@@ -142,9 +153,25 @@ houses.forEach((house, index) => {
   const innerEnd = wheelPoint(84, end);
   const innerStart = wheelPoint(84, start);
   const path = `M ${outerStart.join(" ")} A 164 164 0 0 1 ${outerEnd.join(" ")} L ${innerEnd.join(" ")} A 84 84 0 0 0 ${innerStart.join(" ")} Z`;
-  wheel.appendChild(svgElement("path", {d:path, class:"sector", "data-house":house.n}));
-  const [x, y] = wheelPoint(124, start + 15);
+  const sector = svgElement("path", {d:path, class:`sector${featured.has(house.n) ? " featured" : ""}`, "data-house":house.n, role:"button", tabindex:0, "aria-label":`Casa ${house.n}: ${house.title}${featured.has(house.n) ? ", destacada" : ""}`, "aria-controls":"house-detail", "aria-pressed":"false"});
+  sector.addEventListener("click", () => selectHouse(house.n));
+  sector.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      selectHouse(house.n);
+    }
+  });
+  wheel.appendChild(sector);
+  const [iconX, iconY] = wheelPoint(117, start + 15);
+  const icon = svgElement("svg", {x:iconX - 10, y:iconY - 10, width:20, height:20, viewBox:"0 0 24 24", class:"symbol-icon wheel-icon", "data-house":house.n, "aria-hidden":"true"});
+  icon.appendChild(svgElement("use", {href:`#icon-${houseIcons[index]}`}));
+  wheel.appendChild(icon);
+  const [x, y] = wheelPoint(147, start + 15);
   wheel.appendChild(svgElement("text", {x, y, class:"wheel-label", "data-house":house.n}, String(house.n)));
+  if (featured.has(house.n)) {
+    const [starX, starY] = wheelPoint(96, start + 15);
+    wheel.appendChild(svgElement("circle", {cx:starX, cy:starY, r:2, class:"wheel-star", "aria-hidden":"true"}));
+  }
 });
 wheel.appendChild(svgElement("circle", {cx:180, cy:180, r:82, class:"wheel-center"}));
 wheel.appendChild(svgElement("text", {x:180, y:158, class:"center-small"}, "CASA"));
@@ -158,7 +185,12 @@ function selectHouse(number) {
   houseNext.disabled = number === houses.length;
   document.getElementById("house-count").textContent = `${number} / ${houses.length}`;
   document.querySelectorAll(".house-btn").forEach(button => button.setAttribute("aria-pressed", String(Number(button.dataset.house) === number)));
-  wheel.querySelectorAll("[data-house]").forEach(element => element.classList.toggle("active", Number(element.dataset.house) === number));
+  wheel.querySelectorAll("[data-house]").forEach(element => {
+    const selected = Number(element.dataset.house) === number;
+    element.classList.toggle("active", selected);
+    if (element.getAttribute("role") === "button") element.setAttribute("aria-pressed", String(selected));
+  });
+  document.getElementById("map-caption").textContent = `Casa ${house.n} · ${house.title}`;
   wheelNumber.textContent = String(number).padStart(2,"0");
   detail.innerHTML = `<div class="eyebrow">Casa ${house.n} ${featured.has(house.n) ? "✦ Destacada" : ""}</div><div class="number">${String(house.n).padStart(2,"0")}</div><h3>${house.title}</h3><div class="placement">${house.placement}</div><p>${house.text}</p><p class="insight">${house.prompt}</p>`;
 }
