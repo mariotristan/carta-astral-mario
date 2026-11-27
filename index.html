@@ -22,6 +22,19 @@
   @media(max-width:750px){.wrap{width:min(100% - 32px,1160px)}.nav{min-height:65px}.navlinks{gap:14px;font-size:11px}.hero{grid-template-columns:1fr;gap:10px;padding:45px 0}.hero h1{font-size:54px}.orbit-wrap{min-height:300px;grid-row:2}.orbit{width:290px}.orbit-inner .sun{font-size:55px}.stats{grid-template-columns:repeat(2,1fr);margin-bottom:65px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.cards{grid-template-columns:1fr}.card{min-height:auto}.section-heading{display:block}.section-desc{margin-top:12px}.explorer,.qi-grid{grid-template-columns:1fr}.house-list{border-right:0;border-bottom:1px solid var(--line);padding:16px}.house-detail{padding:25px;min-height:340px}.themes{grid-template-columns:1fr}section{padding-bottom:70px}}
   @media(max-width:400px){.navlinks{gap:10px}.navlinks a:nth-child(3){display:none}.hero h1{font-size:47px}.stat{padding:16px}.house-btn{padding:10px 7px}.house-btn strong{font-size:12px}}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  /* Visual language */
+  body{background:#0d0e1a}body:before{background:radial-gradient(ellipse at 75% 4%,#463056 0,transparent 36%),radial-gradient(ellipse at 12% 58%,#1d3340 0,transparent 33%)}
+  .top{background:#0e0e1bbd}.brand{letter-spacing:.04em}.hero{position:relative}.hero:after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#e5bd8066,transparent)}
+  .eyebrow{letter-spacing:.22em}.hero h1 em{background:linear-gradient(110deg,#f6dab0,#bd93c9);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero p{line-height:1.8}
+  .btn{border-radius:4px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}
+  .orbit-wrap{position:relative}.orbit{border:0;box-shadow:none;background:radial-gradient(circle,#71507038 0,transparent 66%)}.orbit:before,.orbit:after{display:none}.orbit-art{position:absolute;inset:0;width:100%;height:100%;overflow:visible}.orbit-inner{width:44%;border-color:#e6bf8766;z-index:1}.orbit-inner .sun{font-size:64px}.z{z-index:1;text-shadow:0 0 16px #e5bd8088}.z1{top:0}.z2{right:6%}.z3{right:0}.z5{bottom:0}.z7{left:0}
+  .stats{background:linear-gradient(110deg,#252136,#191d2c);box-shadow:0 20px 60px #0003}.stat{position:relative}.stat:before{content:"";position:absolute;top:0;left:24px;width:28px;height:2px;background:var(--gold);opacity:.7}.stat strong{font-size:21px}
+  .card,.qi-panel,.theme{position:relative;overflow:hidden}.card{transition:transform .25s,border-color .25s;min-height:240px}.card:after{content:"✧";position:absolute;right:22px;top:16px;color:#e5bd804d;font-size:30px}.card:hover{transform:translateY(-4px);border-color:#e5bd8066}.card-icon{display:grid;place-items:center;width:52px;height:52px;border:1px solid #e5bd804d;border-radius:50%;background:#e5bd800d}.card .tag{margin-top:20px}
+  .explorer{grid-template-columns:1fr 1fr}.house-map{padding:24px 24px 0;display:grid;place-items:center;background:radial-gradient(circle at center,#47375066,transparent 70%)}.house-wheel{width:min(100%,360px);height:auto}.house-wheel .sector{fill:#ffffff05;stroke:#d6b98b55;stroke-width:1;transition:fill .2s}.house-wheel .sector.active{fill:#e5bd8040;stroke:#e5bd80;stroke-width:2}.house-wheel .wheel-label{fill:#ddd0db;font:15px Georgia,serif;text-anchor:middle;dominant-baseline:middle}.house-wheel .wheel-label.active{fill:#f4d5a5;font-weight:bold}.house-wheel .wheel-center{fill:#171725;stroke:#e5bd8070}.house-wheel .center-small{fill:#b8a7b9;font:10px system-ui,sans-serif;letter-spacing:2px;text-anchor:middle}.house-wheel .center-number{fill:#e5bd80;font:40px Georgia,serif;text-anchor:middle}.house-map-caption{text-align:center;color:#b9adb9;font-size:12px;margin:0 0 18px}.house-list{grid-template-columns:repeat(4,1fr);padding:20px 24px 24px;border-right:0;border-top:1px solid var(--line)}.house-btn{min-height:70px}.house-detail{border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,#282237,#191a29)}.house-detail .number{font-size:76px;color:#e4bd83}.house-detail h3{font-size:34px}.house-detail .insight{max-width:420px}
+  .qi-panel{background:linear-gradient(145deg,#232438,#191c2b)}.direction{min-height:76px;display:flex;flex-direction:column;justify-content:center;background:#ffffff08}.direction.center{background:radial-gradient(circle,#70516b,#302b40);font-size:32px}.theme{transition:border-color .2s}.theme:hover,.theme[open]{border-color:#e5bd8066}.theme[open]{background:#272337}
+  @media(max-width:750px){.explorer{grid-template-columns:1fr}.house-list{border-bottom:0}.house-detail{border-left:0;border-top:1px solid var(--line)}.house-map{padding-top:20px}.house-wheel{width:min(100%,310px)}.card{min-height:auto}.orbit-inner .sun{font-size:50px}}
+  @media(max-width:400px){.nav{flex-wrap:wrap;padding:12px 0;gap:8px}.navlinks{width:100%;justify-content:space-between}.navlinks a:nth-child(3){display:inline}.house-list{grid-template-columns:repeat(3,1fr);padding:16px}.house-map{padding:16px 16px 0}}
+  @media(prefers-reduced-motion:reduce){.btn,.card,.theme,.house-wheel .sector{transition:none}.btn:hover,.card:hover{transform:none}}
 </style>
 </head>
 <body>
@@ -30,7 +43,7 @@
 <div class="wrap" id="inicio">
   <div class="hero">
     <div><div class="eyebrow">Una guía para explorarte ✦</div><h1>Tu universo,<br><em>Mario.</em></h1><p>Una forma diferente de recorrer tu carta: descubre sus símbolos, conecta ideas y quédate con lo que resuene contigo.</p><div class="buttons"><a class="btn primary" href="#casas">Explorar mi carta <span>↗</span></a><a class="btn" href="#esencia">Empezar por lo esencial</a></div></div>
-    <div class="orbit-wrap" aria-hidden="true"><div class="orbit"><span class="z z1">✧</span><span class="z z2">♐</span><span class="z z3">♒</span><span class="z z4">✶</span><span class="z z5">♌</span><span class="z z6">♈</span><span class="z z7">✧</span><span class="z z8">☾</span><div class="orbit-inner"><span class="sun">☼</span><small>Tu mapa interior</small></div></div></div>
+    <div class="orbit-wrap" aria-hidden="true"><div class="orbit"><svg class="orbit-art" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="orbit-gradient" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#f0cf9f"/><stop offset="1" stop-color="#aa88c4"/></linearGradient></defs><circle cx="200" cy="200" r="189" stroke="url(#orbit-gradient)" opacity=".55"/><circle cx="200" cy="200" r="164" stroke="#d7bbd9" opacity=".3"/><circle cx="200" cy="200" r="136" stroke="#d7bbd9" stroke-dasharray="2 8" opacity=".5"/><path d="M200 12v26M200 362v26M12 200h26M362 200h26M68 68l18 18M314 314l18 18M332 68l-18 18M86 314l-18 18" stroke="#e5bd80" opacity=".6"/><path d="M75 132l45-37 47 21M249 77l42 35 44 6M66 261l39 34 47-5M244 316l43-23 42-19" stroke="#c3a9ed" opacity=".35"/><g fill="#e5bd80"><circle cx="75" cy="132" r="2"/><circle cx="120" cy="95" r="3"/><circle cx="167" cy="116" r="2"/><circle cx="249" cy="77" r="2"/><circle cx="291" cy="112" r="3"/><circle cx="335" cy="118" r="2"/><circle cx="66" cy="261" r="2"/><circle cx="105" cy="295" r="3"/><circle cx="152" cy="290" r="2"/><circle cx="244" cy="316" r="2"/><circle cx="287" cy="293" r="3"/><circle cx="329" cy="274" r="2"/></g></svg><span class="z z1">✧</span><span class="z z2">♐</span><span class="z z3">♒</span><span class="z z4">✶</span><span class="z z5">♌</span><span class="z z6">♈</span><span class="z z7">✧</span><span class="z z8">☾</span><div class="orbit-inner"><span class="sun">☼</span><small>Tu mapa interior</small></div></div></div>
   </div>
   <div class="stats" aria-label="Datos principales de la carta"><div class="stat"><small>Sol</small><strong><span>☉</span> Sagitario</strong></div><div class="stat"><small>Luna</small><strong><span>☾</span> Acuario</strong></div><div class="stat"><small>Ascendente</small><strong><span>↑</span> Leo</strong></div><div class="stat"><small>Signo chino</small><strong><span>✧</span> Perro de agua</strong></div></div>
   <section id="esencia"><div class="section-heading"><div><div class="eyebrow">01 / Tu punto de partida</div><h2 class="section-title">Tres piezas de tu esencia<span class="spark">.</span></h2></div><p class="section-desc">Una primera mirada a los símbolos centrales de tu carta natal.</p></div><div class="cards">
@@ -39,7 +52,7 @@
     <article class="card"><div class="card-icon">↑</div><div class="tag">Tu presencia · Ascendente en Leo</div><h3>Una luz propia</h3><p>Una presencia cálida y creativa. El desafío que propone la carta es confiar en tus talentos sin depender de la aprobación externa.</p></article>
   </div></section>
   <section id="casas"><div class="section-heading"><div><div class="eyebrow">02 / El mapa de tu vida</div><h2 class="section-title">Explora tus 12 casas<span class="spark">.</span></h2></div><p class="section-desc">Cada casa representa un área de la vida. Elige una para descubrir su historia; las marcadas con ✦ son las que destaca tu documento.</p></div>
-    <div class="explorer"><div id="house-list" class="house-list" aria-label="Elige una casa"></div><div id="house-detail" class="house-detail" aria-live="polite"></div></div><p class="note">Interpretaciones resumidas del documento original; no son cálculos astrológicos nuevos.</p>
+    <div class="explorer"><div><div class="house-map"><svg id="house-wheel" class="house-wheel" viewBox="0 0 360 360" aria-hidden="true"></svg><p class="house-map-caption">Mapa ilustrativo · selecciona una casa abajo</p></div><div id="house-list" class="house-list" role="group" aria-label="Elige una casa"></div></div><div id="house-detail" class="house-detail" aria-live="polite" aria-atomic="true"></div></div><p class="note">El mapa es esquemático: sus sectores iguales no representan grados ni posiciones reales. Interpretaciones resumidas del documento original; no son cálculos astrológicos nuevos.</p>
   </section>
   <section id="qimen"><div class="section-heading"><div><div class="eyebrow">03 / Otra forma de mirar</div><h2 class="section-title">Tu universo Qi Men<span class="spark">.</span></h2></div><p class="section-desc">Una segunda tradición, con símbolos propios y una brújula de posibilidades.</p></div><div class="qi-grid">
     <div class="qi-panel"><h3>El tigre y el agua</h3><p>Tu carta Qi Men describe al <strong>Perro de agua yang</strong>: comunicación, creatividad y fluidez. El <strong>Tigre</strong> simboliza determinación y liderazgo; la <strong>Madera yin</strong>, sensibilidad y capacidad de adaptación.</p><div class="pill-list"><span class="pill">✦ Guardián · Tigre</span><span class="pill">☷ Día maestro · Madera yin</span><span class="pill">☾ Puerta · Reposo</span><span class="pill">✧ Estrella · Grano</span></div><p>La puerta de reposo propone tranquilidad y cuidado; la estrella de grano habla de estabilidad y disfrute.</p></div>
@@ -72,10 +85,40 @@ const houses = [
 const featured = new Set([1,2,4,5,7,10]);
 const list = document.getElementById("house-list");
 const detail = document.getElementById("house-detail");
+const wheel = document.getElementById("house-wheel");
+const svgNS = "http://www.w3.org/2000/svg";
+function svgElement(name, attributes, text) {
+  const element = document.createElementNS(svgNS, name);
+  Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+  if (text !== undefined) element.textContent = text;
+  return element;
+}
+function wheelPoint(radius, angle) {
+  const radians = angle * Math.PI / 180;
+  return [180 + radius * Math.cos(radians), 180 + radius * Math.sin(radians)];
+}
+houses.forEach((house, index) => {
+  const start = -180 + index * 30;
+  const end = start + 30;
+  const outerStart = wheelPoint(164, start);
+  const outerEnd = wheelPoint(164, end);
+  const innerEnd = wheelPoint(84, end);
+  const innerStart = wheelPoint(84, start);
+  const path = `M ${outerStart.join(" ")} A 164 164 0 0 1 ${outerEnd.join(" ")} L ${innerEnd.join(" ")} A 84 84 0 0 0 ${innerStart.join(" ")} Z`;
+  wheel.appendChild(svgElement("path", {d:path, class:"sector", "data-house":house.n}));
+  const [x, y] = wheelPoint(124, start + 15);
+  wheel.appendChild(svgElement("text", {x, y, class:"wheel-label", "data-house":house.n}, String(house.n)));
+});
+wheel.appendChild(svgElement("circle", {cx:180, cy:180, r:82, class:"wheel-center"}));
+wheel.appendChild(svgElement("text", {x:180, y:158, class:"center-small"}, "CASA"));
+const wheelNumber = svgElement("text", {x:180, y:205, class:"center-number"}, "01");
+wheel.appendChild(wheelNumber);
 function selectHouse(number) {
   const house = houses.find(item => item.n === number);
   if (!house) return;
   document.querySelectorAll(".house-btn").forEach(button => button.setAttribute("aria-pressed", String(Number(button.dataset.house) === number)));
+  wheel.querySelectorAll("[data-house]").forEach(element => element.classList.toggle("active", Number(element.dataset.house) === number));
+  wheelNumber.textContent = String(number).padStart(2,"0");
   detail.innerHTML = `<div class="eyebrow">Casa ${house.n} ${featured.has(house.n) ? "✦ Destacada" : ""}</div><div class="number">${String(house.n).padStart(2,"0")}</div><h3>${house.title}</h3><div class="placement">${house.placement}</div><p>${house.text}</p><p class="insight">${house.prompt}</p>`;
 }
 houses.forEach(house => {
