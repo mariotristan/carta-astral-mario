@@ -56,9 +56,20 @@
   @media(max-width:400px){.nav{padding:8px 12px;gap:8px}.stat:before{left:18px}.house-detail{padding:24px}.card,.qi-panel{padding:22px}}
   @media(prefers-reduced-motion:reduce){.navlinks a{transition:none}}
   @media(forced-colors:active){.nav,.stat,.card,.explorer,.qi-panel,.theme,.btn,.house-btn{border:1px solid CanvasText}}
+  .explorer-body{min-width:0}.house-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 24px;border-top:1px solid var(--line)}.step-button{border:1px solid #e5bd8040;border-radius:999px;background:#242437;padding:9px 14px;min-height:44px;font-size:13px}.step-button:hover{background:#393043}.step-button:disabled{opacity:.45;cursor:default}.step-count{color:var(--muted);font-size:12px;white-space:nowrap}.explorer .house-detail{justify-content:flex-start}.house-help{padding:0 24px 16px;margin:0;font-size:12px;color:var(--muted)}button.direction{font:inherit;width:100%;cursor:pointer}button.direction[aria-pressed=true]{border-color:var(--gold);background:#e5bd8026;box-shadow:inset 0 0 0 1px #e5bd8060}.qi-selection{margin-top:18px;padding:18px;border:1px solid #e5bd8040;border-radius:12px;background:#e5bd8008}.qi-selection h4{margin:0 0 6px;font:normal 23px Georgia,serif}.qi-selection p{margin:0}.qi-selection .note{margin-top:8px}.qi-controls{display:flex;justify-content:space-between;gap:10px;margin-top:14px}
+  @media(max-width:750px){.explorer .house-detail{min-height:0}.house-controls{padding:16px}.house-help{padding-inline:16px}.step-button{padding-inline:12px}}
+  .icon-defs{position:absolute;width:0;height:0;overflow:hidden}.symbol-icon{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.card-icon .symbol-icon{width:32px;height:32px}.direction.center .symbol-icon{width:36px;height:36px}.brand .symbol-icon{width:24px;height:24px;vertical-align:middle;color:var(--gold);margin-right:8px}.step-button{display:inline-flex;align-items:center;justify-content:center;gap:8px}.step-button .symbol-icon{width:18px;height:18px}
 </style>
 </head>
 <body>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M19 5l-1.5 1.5m-11 11L5 19"/></symbol>
+<symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/><path d="M18 3v4m-2-2h4"/></symbol>
+<symbol id="icon-rise" viewBox="0 0 24 24"><path d="M12 15V3m-5 5 5-5 5 5M3 19h18M5 15h2m10 0h2M7 22h10"/></symbol>
+<symbol id="icon-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8ZM12 1v2m0 18v2M1 12h2m18 0h2"/></symbol>
+<symbol id="icon-left" viewBox="0 0 24 24"><path d="m10 5-7 7 7 7M3 12h18"/></symbol>
+<symbol id="icon-right" viewBox="0 0 24 24"><path d="m14 5 7 7-7 7M21 12H3"/></symbol>
+</defs></svg>
 <a class="skip" href="#contenido">Saltar al contenido</a>
 <header class="top"><div class="wrap nav"><a class="brand" href="#inicio"><span>✳</span> tu universo</a><button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-controls="navlinks" aria-expanded="false" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><nav class="navlinks" id="navlinks" aria-label="Navegación principal"><a href="#esencia">Tu esencia</a><a href="#casas">Las casas</a><a href="#qimen">Qi Men</a><a href="#reflexiones">Reflexiones</a></nav></div></header>
 <main id="contenido">
@@ -70,16 +81,16 @@
   </div>
   <div class="stats" aria-label="Datos principales de la carta"><div class="stat"><small>Sol</small><strong><span>☉</span> Sagitario</strong></div><div class="stat"><small>Luna</small><strong><span>☾</span> Acuario</strong></div><div class="stat"><small>Ascendente</small><strong><span>↑</span> Leo</strong></div><div class="stat"><small>Signo chino</small><strong><span>✧</span> Perro de agua</strong></div></div>
   <section id="esencia"><div class="section-heading"><div><div class="eyebrow">01 / Tu punto de partida</div><h2 class="section-title">Tres piezas de tu esencia<span class="spark">.</span></h2></div><p class="section-desc">Una primera mirada a los símbolos centrales de tu carta natal.</p></div><div class="cards">
-    <article class="card"><div class="card-icon">☉</div><div class="tag">Tu identidad · Sol en Sagitario</div><h3>El explorador creativo</h3><p>Curiosidad, libertad y búsqueda de sentido. En la casa 5, tu Sol invita a expresarte, jugar y dar vida a proyectos propios.</p></article>
-    <article class="card"><div class="card-icon">☾</div><div class="tag">Tu mundo emocional · Luna en Acuario</div><h3>Conectar a tu manera</h3><p>La carta relaciona tu mundo emocional con los vínculos cercanos, combinando la necesidad de compañía con espacio para ser tú.</p></article>
-    <article class="card"><div class="card-icon">↑</div><div class="tag">Tu presencia · Ascendente en Leo</div><h3>Una luz propia</h3><p>Una presencia cálida y creativa. El desafío que propone la carta es confiar en tus talentos sin depender de la aprobación externa.</p></article>
+    <article class="card"><div class="card-icon"><svg class="symbol-icon" aria-hidden="true"><use href="#icon-sun"/></svg></div><div class="tag">Tu identidad · Sol en Sagitario</div><h3>El explorador creativo</h3><p>Curiosidad, libertad y búsqueda de sentido. En la casa 5, tu Sol invita a expresarte, jugar y dar vida a proyectos propios.</p></article>
+    <article class="card"><div class="card-icon"><svg class="symbol-icon" aria-hidden="true"><use href="#icon-moon"/></svg></div><div class="tag">Tu mundo emocional · Luna en Acuario</div><h3>Conectar a tu manera</h3><p>La carta relaciona tu mundo emocional con los vínculos cercanos, combinando la necesidad de compañía con espacio para ser tú.</p></article>
+    <article class="card"><div class="card-icon"><svg class="symbol-icon" aria-hidden="true"><use href="#icon-rise"/></svg></div><div class="tag">Tu presencia · Ascendente en Leo</div><h3>Una luz propia</h3><p>Una presencia cálida y creativa. El desafío que propone la carta es confiar en tus talentos sin depender de la aprobación externa.</p></article>
   </div></section>
   <section id="casas"><div class="section-heading"><div><div class="eyebrow">02 / El mapa de tu vida</div><h2 class="section-title">Explora tus 12 casas<span class="spark">.</span></h2></div><p class="section-desc">Cada casa representa un área de la vida. Elige una para descubrir su historia; las marcadas con ✦ son las que destaca tu documento.</p></div>
-    <div class="explorer"><div><div class="house-map"><svg id="house-wheel" class="house-wheel" viewBox="0 0 360 360" aria-hidden="true"></svg><p class="house-map-caption">Mapa ilustrativo · selecciona una casa abajo</p></div><div id="house-list" class="house-list" role="group" aria-label="Elige una casa"></div></div><div id="house-detail" class="house-detail" aria-live="polite" aria-atomic="true"></div></div><p class="note">El mapa es esquemático: sus sectores iguales no representan grados ni posiciones reales. Interpretaciones resumidas del documento original; no son cálculos astrológicos nuevos.</p>
+    <div class="explorer"><div><div class="house-map"><svg id="house-wheel" class="house-wheel" viewBox="0 0 360 360" aria-hidden="true"></svg><p class="house-map-caption">Mapa ilustrativo · selecciona una casa abajo</p></div><div id="house-list" class="house-list" role="group" aria-label="Elige una casa" aria-describedby="house-help"></div><p id="house-help" class="house-help">Usa las flechas del teclado para recorrer las casas; Inicio y Fin llevan a la primera y la última.</p></div><div class="explorer-body"><div id="house-detail" class="house-detail" aria-live="polite" aria-atomic="true"></div><div class="house-controls" aria-label="Recorrer las casas"><button id="house-prev" class="step-button" type="button">← Anterior</button><span id="house-count" class="step-count"></span><button id="house-next" class="step-button" type="button">Siguiente →</button></div></div></div><p class="note">El mapa es esquemático: sus sectores iguales no representan grados ni posiciones reales. Interpretaciones resumidas del documento original; no son cálculos astrológicos nuevos.</p>
   </section>
   <section id="qimen"><div class="section-heading"><div><div class="eyebrow">03 / Otra forma de mirar</div><h2 class="section-title">Tu universo Qi Men<span class="spark">.</span></h2></div><p class="section-desc">Una segunda tradición, con símbolos propios y una brújula de posibilidades.</p></div><div class="qi-grid">
     <div class="qi-panel"><h3>El tigre y el agua</h3><p>Tu carta Qi Men describe al <strong>Perro de agua yang</strong>: comunicación, creatividad y fluidez. El <strong>Tigre</strong> simboliza determinación y liderazgo; la <strong>Madera yin</strong>, sensibilidad y capacidad de adaptación.</p><div class="pill-list"><span class="pill">✦ Guardián · Tigre</span><span class="pill">☷ Día maestro · Madera yin</span><span class="pill">☾ Puerta · Reposo</span><span class="pill">✧ Estrella · Grano</span></div><p>La puerta de reposo propone tranquilidad y cuidado; la estrella de grano habla de estabilidad y disfrute.</p></div>
-    <div class="qi-panel"><h3>Tu brújula simbólica</h3><p>Según el mapa incluido en tu documento. Las direcciones se muestran tal como aparecen allí.</p><div class="compass" aria-label="Mapa de direcciones Qi Men"><div class="direction"><b>Sureste</b><span>Madera</span></div><div class="direction"><b>Sur</b><span>Fuego</span></div><div class="direction"><b>Suroeste</b><span>Tierra · Profesión</span></div><div class="direction"><b>Este</b><span>Madera</span></div><div class="direction center" aria-hidden="true">✳</div><div class="direction"><b>Oeste</b><span>Metal · Destino y salud</span></div><div class="direction"><b>Noreste</b><span>Tierra</span></div><div class="direction"><b>Norte</b><span>Agua</span></div><div class="direction"><b>Noroeste</b><span>Metal · Riqueza y relaciones</span></div></div></div>
+    <div class="qi-panel"><h3>Tu brújula simbólica</h3><p>Selecciona una dirección o recórrelas con los controles. El mapa conserva la disposición del documento, no la de una brújula geográfica.</p><div id="qi-compass" class="compass" role="group" aria-label="Elige una dirección Qi Men"><button type="button" class="direction" aria-pressed="false"><b>Sureste</b><span>Madera</span></button><button type="button" class="direction" aria-pressed="false"><b>Sur</b><span>Fuego</span></button><button type="button" class="direction" aria-pressed="false"><b>Suroeste</b><span>Tierra · Profesión</span></button><button type="button" class="direction" aria-pressed="false"><b>Este</b><span>Madera</span></button><div class="direction center" aria-hidden="true">✳</div><button type="button" class="direction" aria-pressed="false"><b>Oeste</b><span>Metal · Destino y salud</span></button><button type="button" class="direction" aria-pressed="false"><b>Noreste</b><span>Tierra</span></button><button type="button" class="direction" aria-pressed="false"><b>Norte</b><span>Agua</span></button><button type="button" class="direction" aria-pressed="false"><b>Noroeste</b><span>Metal · Riqueza y relaciones</span></button></div><div id="qi-selection" class="qi-selection" aria-live="polite" aria-atomic="true"><h4 id="qi-direction"></h4><p id="qi-association"></p><p class="note">Asociaciones del documento original; no son recomendaciones ni predicciones.</p></div><div class="qi-controls" aria-label="Recorrer direcciones Qi Men"><button id="qi-prev" class="step-button" type="button">← Anterior</button><button id="qi-next" class="step-button" type="button">Siguiente →</button></div></div>
   </div></section>
   <section id="reflexiones"><div class="section-heading"><div><div class="eyebrow">04 / Para llevar contigo</div><h2 class="section-title">Pistas para reflexionar<span class="spark">.</span></h2></div><p class="section-desc">Abre una idea a la vez. No hay respuestas correctas, solo preguntas para explorar.</p></div><div class="themes">
     <details class="theme"><summary>Brillar sin demostrar</summary><p>La carta conecta a Quirón en la casa 10 con el valor personal y la vocación. ¿Cómo sería definir el éxito con tus propias palabras, más allá del reconocimiento?</p></details>
@@ -109,6 +120,9 @@ const featured = new Set([1,2,4,5,7,10]);
 const list = document.getElementById("house-list");
 const detail = document.getElementById("house-detail");
 const wheel = document.getElementById("house-wheel");
+const housePrev = document.getElementById("house-prev");
+const houseNext = document.getElementById("house-next");
+let selectedHouse = 1;
 const svgNS = "http://www.w3.org/2000/svg";
 function svgElement(name, attributes, text) {
   const element = document.createElementNS(svgNS, name);
@@ -139,6 +153,10 @@ wheel.appendChild(wheelNumber);
 function selectHouse(number) {
   const house = houses.find(item => item.n === number);
   if (!house) return;
+  selectedHouse = number;
+  housePrev.disabled = number === 1;
+  houseNext.disabled = number === houses.length;
+  document.getElementById("house-count").textContent = `${number} / ${houses.length}`;
   document.querySelectorAll(".house-btn").forEach(button => button.setAttribute("aria-pressed", String(Number(button.dataset.house) === number)));
   wheel.querySelectorAll("[data-house]").forEach(element => element.classList.toggle("active", Number(element.dataset.house) === number));
   wheelNumber.textContent = String(number).padStart(2,"0");
@@ -150,11 +168,49 @@ houses.forEach(house => {
   button.className = "house-btn";
   button.dataset.house = house.n;
   button.setAttribute("aria-pressed","false");
+  button.setAttribute("aria-controls","house-detail");
   button.innerHTML = `<small>Casa ${house.n} ${featured.has(house.n) ? "✦" : ""}</small><strong>${house.title}</strong>`;
   button.addEventListener("click", () => selectHouse(house.n));
+  button.addEventListener("keydown", event => {
+    const offset = {ArrowLeft:-1, ArrowUp:-1, ArrowRight:1, ArrowDown:1}[event.key];
+    const target = event.key === "Home" ? 1 : event.key === "End" ? houses.length : offset ? Math.max(1, Math.min(houses.length, house.n + offset)) : null;
+    if (target === null) return;
+    event.preventDefault();
+    selectHouse(target);
+    list.children[target - 1].focus();
+  });
   list.appendChild(button);
 });
+housePrev.addEventListener("click", () => selectHouse(Math.max(1, selectedHouse - 1)));
+houseNext.addEventListener("click", () => selectHouse(Math.min(houses.length, selectedHouse + 1)));
 selectHouse(1);
+const qiButtons = Array.from(document.querySelectorAll("#qi-compass button"));
+const qiPrev = document.getElementById("qi-prev");
+const qiNext = document.getElementById("qi-next");
+let selectedDirection = 0;
+function selectDirection(index) {
+  selectedDirection = index;
+  qiButtons.forEach((button, position) => button.setAttribute("aria-pressed", String(position === index)));
+  document.getElementById("qi-direction").textContent = qiButtons[index].querySelector("b").textContent;
+  document.getElementById("qi-association").textContent = qiButtons[index].querySelector("span").textContent;
+  qiPrev.disabled = index === 0;
+  qiNext.disabled = index === qiButtons.length - 1;
+}
+qiButtons.forEach((button, index) => {
+  button.setAttribute("aria-controls", "qi-selection");
+  button.addEventListener("click", () => selectDirection(index));
+});
+const compassCenter = document.querySelector("#qi-compass .center");
+compassCenter.innerHTML = '<svg class="symbol-icon" aria-hidden="true"><use href="#icon-compass"/></svg>';
+["house-prev", "qi-prev", "house-next", "qi-next"].forEach(id => {
+  const button = document.getElementById(id);
+  const previous = id.endsWith("prev");
+  const icon = `<svg class="symbol-icon" aria-hidden="true"><use href="#icon-${previous ? "left" : "right"}"/></svg>`;
+  button.innerHTML = previous ? `${icon}Anterior` : `Siguiente${icon}`;
+});
+qiPrev.addEventListener("click", () => selectDirection(Math.max(0, selectedDirection - 1)));
+qiNext.addEventListener("click", () => selectDirection(Math.min(qiButtons.length - 1, selectedDirection + 1)));
+selectDirection(0);
 const motionToggle = document.getElementById("motion-toggle");
 const orbit = document.querySelector(".orbit");
 motionToggle.hidden = false;
