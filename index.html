@@ -35,6 +35,13 @@
   @media(max-width:750px){.explorer{grid-template-columns:1fr}.house-list{border-bottom:0}.house-detail{border-left:0;border-top:1px solid var(--line)}.house-map{padding-top:20px}.house-wheel{width:min(100%,310px)}.card{min-height:auto}.orbit-inner .sun{font-size:50px}}
   @media(max-width:400px){.nav{flex-wrap:wrap;padding:12px 0;gap:8px}.navlinks{width:100%;justify-content:space-between}.navlinks a:nth-child(3){display:inline}.house-list{grid-template-columns:repeat(3,1fr);padding:16px}.house-map{padding:16px 16px 0}}
   @media(prefers-reduced-motion:reduce){.btn,.card,.theme,.house-wheel .sector{transition:none}.btn:hover,.card:hover{transform:none}}
+  .navlinks a{position:relative;padding:6px 0}.navlinks a:after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .25s}.navlinks a:hover:after,.navlinks a:focus-visible:after{transform:scaleX(1)}
+  .house-btn{transition:background .2s,border-color .2s,box-shadow .2s}.house-btn[aria-pressed=true]{box-shadow:inset 0 0 0 1px #e5bd8040,0 6px 20px #0002}.house-wheel .sector{transition:fill .35s,stroke .35s}.direction{transition:background .25s,border-color .25s}.direction:not(.center):hover{background:#e5bd801a;border-color:#e5bd8066}
+  .motion-toggle{position:absolute;right:calc(24% - 65px);bottom:20px;z-index:2;background:#171625;border:1px solid #e5bd8055;border-radius:20px;color:#e8d5c2;padding:6px 12px;font-size:11px;letter-spacing:.04em}.motion-toggle:hover{background:#30283b;border-color:#e5bd80}.motion-toggle[hidden]{display:none}
+  @keyframes orbit-turn{to{transform:rotate(360deg)}}@keyframes orbit-glow{0%,100%{opacity:.55}50%{opacity:1}}@keyframes sun-breathe{0%,100%{transform:scale(1);text-shadow:0 0 12px #e5bd8044}50%{transform:scale(1.07);text-shadow:0 0 25px #e5bd8099}}
+  @media(prefers-reduced-motion:no-preference){.orbit-art>circle:nth-of-type(3),.orbit-art>path:first-of-type{transform-box:view-box;transform-origin:center;animation:orbit-turn 90s linear infinite}.orbit-art>circle:nth-of-type(3){animation-duration:65s;animation-direction:reverse}.orbit-art>g,.z1,.z4,.z7{animation:orbit-glow 5s ease-in-out infinite}.z4{animation-delay:-2s}.z7{animation-delay:-4s}.orbit-inner .sun{animation:sun-breathe 7s ease-in-out infinite}.orbit.motion-paused *{animation-play-state:paused}}
+  @media(max-width:750px){.motion-toggle{position:static;justify-self:center;grid-row:3;margin-top:8px}}
+  @media(prefers-reduced-motion:reduce){.motion-toggle{display:none}.navlinks a:after,.house-btn,.direction{transition:none}}
 </style>
 </head>
 <body>
@@ -44,6 +51,7 @@
   <div class="hero">
     <div><div class="eyebrow">Una guía para explorarte ✦</div><h1>Tu universo,<br><em>Mario.</em></h1><p>Una forma diferente de recorrer tu carta: descubre sus símbolos, conecta ideas y quédate con lo que resuene contigo.</p><div class="buttons"><a class="btn primary" href="#casas">Explorar mi carta <span>↗</span></a><a class="btn" href="#esencia">Empezar por lo esencial</a></div></div>
     <div class="orbit-wrap" aria-hidden="true"><div class="orbit"><svg class="orbit-art" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="orbit-gradient" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#f0cf9f"/><stop offset="1" stop-color="#aa88c4"/></linearGradient></defs><circle cx="200" cy="200" r="189" stroke="url(#orbit-gradient)" opacity=".55"/><circle cx="200" cy="200" r="164" stroke="#d7bbd9" opacity=".3"/><circle cx="200" cy="200" r="136" stroke="#d7bbd9" stroke-dasharray="2 8" opacity=".5"/><path d="M200 12v26M200 362v26M12 200h26M362 200h26M68 68l18 18M314 314l18 18M332 68l-18 18M86 314l-18 18" stroke="#e5bd80" opacity=".6"/><path d="M75 132l45-37 47 21M249 77l42 35 44 6M66 261l39 34 47-5M244 316l43-23 42-19" stroke="#c3a9ed" opacity=".35"/><g fill="#e5bd80"><circle cx="75" cy="132" r="2"/><circle cx="120" cy="95" r="3"/><circle cx="167" cy="116" r="2"/><circle cx="249" cy="77" r="2"/><circle cx="291" cy="112" r="3"/><circle cx="335" cy="118" r="2"/><circle cx="66" cy="261" r="2"/><circle cx="105" cy="295" r="3"/><circle cx="152" cy="290" r="2"/><circle cx="244" cy="316" r="2"/><circle cx="287" cy="293" r="3"/><circle cx="329" cy="274" r="2"/></g></svg><span class="z z1">✧</span><span class="z z2">♐</span><span class="z z3">♒</span><span class="z z4">✶</span><span class="z z5">♌</span><span class="z z6">♈</span><span class="z z7">✧</span><span class="z z8">☾</span><div class="orbit-inner"><span class="sun">☼</span><small>Tu mapa interior</small></div></div></div>
+    <button id="motion-toggle" class="motion-toggle" type="button" hidden>Pausar animación</button>
   </div>
   <div class="stats" aria-label="Datos principales de la carta"><div class="stat"><small>Sol</small><strong><span>☉</span> Sagitario</strong></div><div class="stat"><small>Luna</small><strong><span>☾</span> Acuario</strong></div><div class="stat"><small>Ascendente</small><strong><span>↑</span> Leo</strong></div><div class="stat"><small>Signo chino</small><strong><span>✧</span> Perro de agua</strong></div></div>
   <section id="esencia"><div class="section-heading"><div><div class="eyebrow">01 / Tu punto de partida</div><h2 class="section-title">Tres piezas de tu esencia<span class="spark">.</span></h2></div><p class="section-desc">Una primera mirada a los símbolos centrales de tu carta natal.</p></div><div class="cards">
@@ -132,6 +140,13 @@ houses.forEach(house => {
   list.appendChild(button);
 });
 selectHouse(1);
+const motionToggle = document.getElementById("motion-toggle");
+const orbit = document.querySelector(".orbit");
+motionToggle.hidden = false;
+motionToggle.addEventListener("click", () => {
+  const paused = orbit.classList.toggle("motion-paused");
+  motionToggle.textContent = paused ? "Reanudar animación" : "Pausar animación";
+});
 </script>
 </body>
 </html>
