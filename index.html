@@ -66,6 +66,10 @@
   @media(max-width:400px){.qi-symbols{gap:8px}.qi-symbol-card{padding:12px;gap:8px}.qi-symbol-card .symbol-icon{width:24px;height:24px}.qi-symbol-card strong{font-size:12px}.compass{padding:8px;gap:6px}.compass .direction{min-height:106px}.compass .direction b{font-size:11px}}
   body{background:var(--bg)}body:before{background:radial-gradient(ellipse at 75% 4%,#bea3f526,transparent 36%),radial-gradient(ellipse at 12% 58%,#8ed5c614,transparent 33%),radial-gradient(ellipse at 90% 80%,#9bcfe610,transparent 35%)}.hero h1 em{background-image:linear-gradient(110deg,var(--gold),var(--purple))}.orbit{background:radial-gradient(circle,#bea3f520,transparent 66%)}.orbit-inner{background:radial-gradient(circle,#53405f,#202639 70%);border-color:var(--gold)}.orbit-inner .sun{color:var(--gold)}.z2{color:var(--purple)}.z3,.z8{color:var(--lunar)}.z5{color:var(--gold)}
   .stat:nth-child(1),.card:nth-child(1){--identity-color:var(--purple);--identity-bg:#bea3f514}.stat:nth-child(2),.card:nth-child(2){--identity-color:var(--lunar);--identity-bg:#9bcfe614}.stat:nth-child(3),.card:nth-child(3){--identity-color:var(--gold);--identity-bg:#f2c16b14}.stat:nth-child(4){--identity-color:var(--water);--identity-bg:#8ed5c614}.stats .stat{background:linear-gradient(145deg,var(--identity-bg),#1a1d2c);border-top-color:var(--identity-color)}.stat:before{background:var(--identity-color);opacity:1}.stat strong span{color:var(--identity-color)}.card{border-top-color:var(--identity-color);background:linear-gradient(145deg,var(--identity-bg),#1b1b2b)}.card .card-icon{color:var(--identity-color);border-color:var(--identity-color);background:var(--identity-bg)}.card .tag{color:var(--identity-color)}.card:hover{border-color:var(--identity-color)}.stats{margin-bottom:12px}.palette-note{font-size:12px;color:var(--muted);margin:0 0 70px;max-width:72ch}.qi-emblem{color:var(--gold)}.house-wheel .wheel-label.active,.house-wheel .center-number{fill:var(--gold)}.wheel-icon{color:var(--purple)}.wheel-icon.active{color:var(--gold)}
+  .utility-bar{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;padding-top:20px}.utility-bar[hidden]{display:none}.selection-link{display:block;margin:0 24px 20px;color:var(--lunar);font-size:13px;text-decoration:underline;text-underline-offset:4px}.qi-panel .selection-link{margin:16px 0 0}.source-note{border-left:3px solid var(--gold);padding:12px 16px;background:#f2c16b0c;color:var(--text);font-size:13px}.house-reading{display:none}.reading-house{padding:24px 0;border-bottom:1px solid var(--line)}.reading-house h3{font:normal 28px Georgia,serif;margin:10px 0}.reading-house .number{display:none}.reading-house .placement{color:var(--purple);font-size:13px}.reading-house p{max-width:70ch}.reading-mode .wrap{max-width:860px}.reading-mode .hero{grid-template-columns:1fr;min-height:0;padding:40px 0}.reading-mode .hero h1{font-size:54px}.reading-mode .orbit-wrap,.reading-mode .motion-toggle,.reading-mode .hero .buttons,.reading-mode .explorer,.reading-mode .qi-emblem{display:none}.reading-mode .house-reading{display:block}.reading-mode .cards,.reading-mode .qi-grid,.reading-mode .themes{grid-template-columns:1fr}.reading-mode .card{min-height:0}.reading-mode .card:hover{transform:none}.reading-mode .nav{flex-wrap:wrap}.reading-mode .navlinks{flex-wrap:wrap}.reading-mode .insight{line-height:1.8}
+  @media(max-width:750px){.house-list{grid-template-columns:repeat(3,minmax(0,1fr))}.house-btn{min-width:0;min-height:76px}.house-btn strong{overflow-wrap:anywhere}.explorer-body{scroll-margin-top:100px}.selection-link{margin-inline:16px}.utility-bar{justify-content:flex-start}.reading-mode .hero h1{font-size:44px}.qi-panel{min-width:0}.compass{grid-template-columns:repeat(3,minmax(0,1fr))}.direction span{overflow-wrap:anywhere}.navlinks a{white-space:nowrap}}
+  @media print{@page{margin:16mm}*,*:before,*:after{color:#161616!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important;animation:none!important;transition:none!important}html{scroll-behavior:auto}body{background:white!important;font-size:11pt}body:before,.top,.skip,.utility-bar,.orbit-wrap,.motion-toggle,.hero .buttons,.explorer,.qi-emblem,.qi-controls,.selection-link,.palette-note{display:none!important}.wrap,.reading-mode .wrap{width:100%;max-width:none}.hero,.reading-mode .hero{display:block;min-height:0;padding:0 0 20px}.hero h1,.reading-mode .hero h1{font-size:36pt}.hero h1 em{-webkit-text-fill-color:#161616}.stats{grid-template-columns:repeat(4,1fr);margin-bottom:24px}.house-reading{display:block}.cards,.qi-grid,.themes{display:block}.card,.qi-panel,.theme,.reading-house{break-inside:avoid;box-shadow:none;padding:16px 0;border:0;border-bottom:1px solid #bbb}.card{min-height:0}.card:after{display:none}section{padding-bottom:28px}.section-heading{display:block}.section-title{font-size:25pt}.section-desc{max-width:none}.theme p{display:block!important}.theme summary:after{display:none}.symbol-icon{stroke:#161616!important}.compass{max-width:420px}.compass .direction{min-height:85px;border:1px solid #aaa}.qi-symbols{max-width:500px}.note,.source-note,.footer{font-size:9pt}.footer{padding:20px 0}.source-note{border-left:2px solid #555}.insight{border-color:#555}}
+  #qi-compass,#house-reading{scroll-margin-top:100px}
 </style>
 </head>
 <body>
@@ -94,6 +98,7 @@
 <header class="top"><div class="wrap nav"><a class="brand" href="#inicio"><span>✳</span> tu universo</a><button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú de navegación" aria-controls="navlinks" aria-expanded="false" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><nav class="navlinks" id="navlinks" aria-label="Navegación principal"><a href="#esencia">Tu esencia</a><a href="#casas">Las casas</a><a href="#qimen">Qi Men</a><a href="#reflexiones">Reflexiones</a></nav></div></header>
 <main id="contenido">
 <div class="wrap" id="inicio">
+  <div id="utility-bar" class="utility-bar" hidden><button id="reading-toggle" class="step-button" type="button" aria-pressed="false">Modo lectura</button><button id="print-page" class="step-button" type="button">Imprimir / guardar PDF</button></div>
   <div class="hero">
     <div><div class="eyebrow">Una guía para explorarte ✦</div><h1>Tu universo,<br><em>Mario.</em></h1><p>Una forma diferente de recorrer tu carta: descubre sus símbolos, conecta ideas y quédate con lo que resuene contigo.</p><div class="buttons"><a class="btn primary" href="#casas">Explorar mi carta <span>↗</span></a><a class="btn" href="#esencia">Empezar por lo esencial</a></div></div>
     <div class="orbit-wrap" aria-hidden="true"><div class="orbit"><svg class="orbit-art" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="orbit-gradient" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#f0cf9f"/><stop offset="1" stop-color="#aa88c4"/></linearGradient></defs><circle cx="200" cy="200" r="189" stroke="url(#orbit-gradient)" opacity=".55"/><circle cx="200" cy="200" r="164" stroke="#d7bbd9" opacity=".3"/><circle cx="200" cy="200" r="136" stroke="#d7bbd9" stroke-dasharray="2 8" opacity=".5"/><path d="M200 12v26M200 362v26M12 200h26M362 200h26M68 68l18 18M314 314l18 18M332 68l-18 18M86 314l-18 18" stroke="#e5bd80" opacity=".6"/><path d="M75 132l45-37 47 21M249 77l42 35 44 6M66 261l39 34 47-5M244 316l43-23 42-19" stroke="#c3a9ed" opacity=".35"/><g fill="#e5bd80"><circle cx="75" cy="132" r="2"/><circle cx="120" cy="95" r="3"/><circle cx="167" cy="116" r="2"/><circle cx="249" cy="77" r="2"/><circle cx="291" cy="112" r="3"/><circle cx="335" cy="118" r="2"/><circle cx="66" cy="261" r="2"/><circle cx="105" cy="295" r="3"/><circle cx="152" cy="290" r="2"/><circle cx="244" cy="316" r="2"/><circle cx="287" cy="293" r="3"/><circle cx="329" cy="274" r="2"/></g></svg><span class="z z1">✧</span><span class="z z2">♐</span><span class="z z3">♒</span><span class="z z4">✶</span><span class="z z5">♌</span><span class="z z6">♈</span><span class="z z7">✧</span><span class="z z8">☾</span><div class="orbit-inner"><span class="sun">☼</span><small>Tu mapa interior</small></div></div></div>
@@ -118,7 +123,7 @@
     <details class="theme"><summary>Equilibrar logro y raíces</summary><p>El documento presenta una tensión simbólica entre la vida pública y el hogar. ¿Qué necesitas para dar espacio tanto a tus proyectos como a tu vida íntima?</p></details>
     <details class="theme"><summary>Del deber al cuidado</summary><p>El eje de los nodos invita a equilibrar responsabilidad y descanso. ¿Qué pequeño gesto de cuidado podrías integrar en tus rutinas?</p></details>
     <details class="theme"><summary>Libertad en los vínculos</summary><p>La carta habla de independencia y conexión en las relaciones. ¿Cómo puedes expresar lo que necesitas sin perder la cercanía?</p></details>
-  </div><p class="note">Nota sobre la fuente: el documento menciona el Medio Cielo tanto en Aries como en Virgo. Aquí se destaca Aries, como en su resumen y en la sección de la casa 10; conviene confirmar la discrepancia con quien preparó la carta.</p></section>
+  </div><p class="source-note" id="source-note"><strong>Dato pendiente de confirmar:</strong> el documento menciona el Medio Cielo en Aries y en Virgo. No hay una fuente corregida disponible para resolverlo. La casa 10 conserva el resumen original, pero no presenta ninguno de esos signos como definitivo. Confirma este dato con quien preparó la carta antes de ampliar su interpretación.</p></section>
 </div>
 </main>
 <footer class="footer"><div class="wrap"><div class="brand"><span>✳</span> tu universo</div><p>Basado en la carta proporcionada por Mario. La astrología y Qi Men se presentan aquí como herramientas simbólicas de reflexión, no como diagnósticos ni predicciones. Si algo relacionado con tu bienestar te preocupa, busca apoyo profesional.</p><p>Hecho para explorar a tu propio ritmo ✦</p></div></footer>
@@ -133,7 +138,7 @@ const houses = [
   {n:7,title:"Vínculos",placement:"Marte y Luna en Acuario",text:"Parejas y asociaciones son el escenario de esta casa. La carta invita a pensar en el equilibrio entre cercanía, libertad individual y comunicación.",prompt:"Para explorar: ¿qué necesitas para sentirte acompañado y libre a la vez?"},
   {n:8,title:"Transformación",placement:"Acuario en casa 8",text:"Esta casa trata de cambios profundos, intimidad y recursos compartidos. Acuario se asocia aquí con apertura mental, independencia y perspectivas poco convencionales.",prompt:"Para explorar: ¿qué nuevas formas de compartir te gustaría imaginar?"},
   {n:9,title:"Horizontes",placement:"Piscis en casa 9",text:"La casa 9 habla de viajes, aprendizaje y visión del mundo. El documento relaciona Piscis con curiosidad espiritual, simbolismo y deseo de conocer otros lugares.",prompt:"Para explorar: ¿qué idea o lugar te gustaría descubrir?"},
-  {n:10,title:"Vocación",placement:"Medio Cielo en Aries · Quirón en Tauro",text:"La décima casa mira hacia la profesión y la imagen pública. La carta resalta iniciativa y liderazgo, junto con una invitación a construir una definición propia del éxito.",prompt:"Para explorar: ¿qué quieres aportar al mundo sin tener que demostrar tu valor?"},
+  {n:10,title:"Vocación",placement:"Medio Cielo: Aries / Virgo, pendiente de confirmar · Quirón en Tauro",text:"La décima casa mira hacia la profesión y la imagen pública. El resumen original resalta iniciativa y liderazgo, junto con una invitación a construir una definición propia del éxito; su atribución al signo del Medio Cielo está pendiente de confirmar.",prompt:"Para explorar: ¿qué quieres aportar al mundo sin tener que demostrar tu valor?"},
   {n:11,title:"Comunidad",placement:"Géminis en casa 11",text:"Amistades, grupos e intereses compartidos. Según la carta, Géminis conecta esta área con la comunicación, la educación y la tecnología.",prompt:"Para explorar: ¿qué conversaciones y comunidades te dan energía?"},
   {n:12,title:"Mundo interior",placement:"Cáncer · Nodo Norte en casa 12",text:"La casa 12 se asocia con la vida interior, la sensibilidad y el descanso. El documento propone cultivar la compasión y dar espacio a las propias emociones.",prompt:"Para explorar: ¿qué te ayuda a hacer una pausa y escucharte?"}
 ];
@@ -144,6 +149,18 @@ const wheel = document.getElementById("house-wheel");
 const housePrev = document.getElementById("house-prev");
 const houseNext = document.getElementById("house-next");
 let selectedHouse = 1;
+function houseMarkup(house) {
+  return `<div class="eyebrow">Casa ${house.n} ${featured.has(house.n) ? "✦ Destacada" : ""}</div><div class="number">${String(house.n).padStart(2,"0")}</div><h3>${house.title}</h3><div class="placement">${house.placement}</div>${house.n === 10 ? '<p class="source-note">Medio Cielo pendiente de confirmar: la fuente menciona Aries y Virgo. <a href="#source-note">Ver nota de la fuente</a>.</p>' : ""}<p>${house.text}</p><p class="insight">${house.prompt}</p>`;
+}
+const houseReading = document.createElement("div");
+houseReading.className = "house-reading";
+houseReading.id = "house-reading";
+houseReading.innerHTML = houses.map(house => `<article class="reading-house">${houseMarkup(house)}</article>`).join("");
+document.querySelector("#casas .explorer").after(houseReading);
+const houseLink = document.createElement("a");
+houseLink.className = "selection-link";
+houseLink.textContent = "Enlace directo a esta casa";
+document.querySelector(".house-controls").after(houseLink);
 const svgNS = "http://www.w3.org/2000/svg";
 function svgElement(name, attributes, text) {
   const element = document.createElementNS(svgNS, name);
@@ -189,7 +206,7 @@ wheel.appendChild(svgElement("circle", {cx:180, cy:180, r:82, class:"wheel-cente
 wheel.appendChild(svgElement("text", {x:180, y:158, class:"center-small"}, "CASA"));
 const wheelNumber = svgElement("text", {x:180, y:205, class:"center-number"}, "01");
 wheel.appendChild(wheelNumber);
-function selectHouse(number) {
+function selectHouse(number, updateURL = true) {
   const house = houses.find(item => item.n === number);
   if (!house) return;
   selectedHouse = number;
@@ -204,7 +221,9 @@ function selectHouse(number) {
   });
   document.getElementById("map-caption").textContent = `Casa ${house.n} · ${house.title}`;
   wheelNumber.textContent = String(number).padStart(2,"0");
-  detail.innerHTML = `<div class="eyebrow">Casa ${house.n} ${featured.has(house.n) ? "✦ Destacada" : ""}</div><div class="number">${String(house.n).padStart(2,"0")}</div><h3>${house.title}</h3><div class="placement">${house.placement}</div><p>${house.text}</p><p class="insight">${house.prompt}</p>`;
+  detail.innerHTML = houseMarkup(house);
+  houseLink.href = `#casa-${number}`;
+  if (updateURL) setSelectionHash(houseLink.href);
 }
 houses.forEach(house => {
   const button = document.createElement("button");
@@ -227,7 +246,7 @@ houses.forEach(house => {
 });
 housePrev.addEventListener("click", () => selectHouse(Math.max(1, selectedHouse - 1)));
 houseNext.addEventListener("click", () => selectHouse(Math.min(houses.length, selectedHouse + 1)));
-selectHouse(1);
+selectHouse(1, false);
 const qiButtons = Array.from(document.querySelectorAll("#qi-compass button"));
 const qiPrev = document.getElementById("qi-prev");
 const qiNext = document.getElementById("qi-next");
@@ -251,7 +270,12 @@ qiLegend.setAttribute("aria-label", "Colores de los elementos");
 qiLegend.innerHTML = qiElements.map(element => `<span data-element="${element.key}"><i aria-hidden="true"></i>${element.label}</span>`).join("");
 document.getElementById("qi-compass").after(qiLegend);
 let selectedDirection = 0;
-function selectDirection(index) {
+const qiSlugs = ["sureste","sur","suroeste","este","oeste","noreste","norte","noroeste"];
+const qiLink = document.createElement("a");
+qiLink.className = "selection-link";
+qiLink.textContent = "Enlace directo a esta dirección";
+document.querySelector(".qi-controls").after(qiLink);
+function selectDirection(index, updateURL = true) {
   selectedDirection = index;
   qiButtons.forEach((button, position) => button.setAttribute("aria-pressed", String(position === index)));
   document.getElementById("qi-direction").textContent = qiButtons[index].querySelector("b").textContent;
@@ -259,6 +283,8 @@ function selectDirection(index) {
   document.getElementById("qi-selection").dataset.element = qiButtons[index].dataset.element;
   qiPrev.disabled = index === 0;
   qiNext.disabled = index === qiButtons.length - 1;
+  qiLink.href = `#qi-${qiSlugs[index]}`;
+  if (updateURL) setSelectionHash(qiLink.href);
 }
 qiButtons.forEach((button, index) => {
   button.setAttribute("aria-controls", "qi-selection");
@@ -274,7 +300,7 @@ compassCenter.innerHTML = '<svg class="symbol-icon" aria-hidden="true"><use href
 });
 qiPrev.addEventListener("click", () => selectDirection(Math.max(0, selectedDirection - 1)));
 qiNext.addEventListener("click", () => selectDirection(Math.min(qiButtons.length - 1, selectedDirection + 1)));
-selectDirection(0);
+selectDirection(0, false);
 const motionToggle = document.getElementById("motion-toggle");
 const orbit = document.querySelector(".orbit");
 motionToggle.hidden = false;
@@ -301,6 +327,69 @@ document.addEventListener("keydown", event => {
 });
 navToggle.hidden = false;
 document.body.classList.add("nav-ready");
+function setSelectionHash(href) {
+  const hash = new URL(href, location.href).hash;
+  if (location.hash !== hash) history.pushState({cartaSelection:{house:selectedHouse, direction:selectedDirection}}, "", hash);
+}
+const linkStatus = document.createElement("p");
+linkStatus.className = "note";
+linkStatus.setAttribute("role", "status");
+document.getElementById("utility-bar").after(linkStatus);
+function restoreSelection(scroll = true) {
+  linkStatus.textContent = "";
+  const houseMatch = /^#casa-(\d+)$/.exec(location.hash);
+  let target;
+  if (houseMatch) {
+    const number = Number(houseMatch[1]);
+    if (number < 1 || number > houses.length) {
+      linkStatus.textContent = "El enlace apunta a una casa que no existe. Elige una de las doce casas.";
+      return;
+    }
+    selectHouse(number, false);
+    target = document.body.classList.contains("reading-mode") ? houseReading : document.querySelector(".explorer-body");
+  } else if (location.hash.startsWith("#casa-")) {
+    linkStatus.textContent = "El enlace de casa no es válido. Elige una de las doce casas.";
+    return;
+  } else if (location.hash.startsWith("#qi-")) {
+    const index = qiSlugs.indexOf(location.hash.slice(4));
+    if (index === -1) {
+      linkStatus.textContent = "El enlace apunta a una dirección Qi Men que no existe. Elige una dirección en la brújula.";
+      return;
+    }
+    selectDirection(index, false);
+    target = document.getElementById("qi-compass");
+  }
+  if (scroll && target) target.scrollIntoView({behavior:"instant", block:"start"});
+}
+window.addEventListener("hashchange", () => restoreSelection());
+window.addEventListener("popstate", event => {
+  const saved = event.state && event.state.cartaSelection;
+  if (saved && Number.isInteger(saved.house) && saved.house >= 1 && saved.house <= houses.length && Number.isInteger(saved.direction) && saved.direction >= 0 && saved.direction < qiButtons.length) {
+    selectHouse(saved.house, false);
+    selectDirection(saved.direction, false);
+  }
+  restoreSelection();
+});
+restoreSelection();
+history.replaceState({cartaSelection:{house:selectedHouse, direction:selectedDirection}}, "", location.href);
+const readingToggle = document.getElementById("reading-toggle");
+readingToggle.addEventListener("click", () => {
+  const reading = document.body.classList.toggle("reading-mode");
+  readingToggle.setAttribute("aria-pressed", String(reading));
+  readingToggle.textContent = reading ? "Volver al mapa" : "Modo lectura";
+  setNavOpen(false);
+});
+document.getElementById("utility-bar").hidden = false;
+document.getElementById("print-page").addEventListener("click", () => window.print());
+let closedThemes = [];
+window.addEventListener("beforeprint", () => {
+  closedThemes = Array.from(document.querySelectorAll(".theme:not([open])"));
+  closedThemes.forEach(theme => { theme.open = true; });
+});
+window.addEventListener("afterprint", () => {
+  closedThemes.forEach(theme => { theme.open = false; });
+  closedThemes = [];
+});
 </script>
 </body>
 </html>
